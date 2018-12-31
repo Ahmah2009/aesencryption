@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="" ng-app="app"> 
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>aesencryption net</title>
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
+      <!-- Place favicon.ico in the root directory -->
+      <!-- build:css styles/vendor.css -->
+      <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+      <!-- bower:css -->
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:css styles/main.css -->
+      <link rel="stylesheet" href="styles/main.css">
+      <!-- endbuild -->
+   </head>
+   <body ng-controller="Controller">
+      <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+ 
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+          <a class="col-md-3 offset-md-3" href="#">AES encryption</a>
+        </nav>
+
+
+        <div class="well col-md-8 offset-md-3">
+          <h1>
+              AES encryption
+          </h1>
+          <h3>
+              Encrypt and decrypt text with AES algorithm
+          </h3>
+
+          <textarea id="taInpText" placeholder="Plain or encrypted text here" name="inpText" rows="5" class="input-block-level" ng-model="text"></textarea>
+          <input autocomplete="off" placeholder="Key of the encryption" class="input-block-level input-large" type="text" name="inpKey" value="" id="inpKey" ng-model="key">
+          
+
+          <select name="sleBlockSize">
+              <option value="128">128 Bit</option>            
+          </select>
+
+          <div>
+              <button type="submit" name="direction" value="Decrypt" class="btn float-right btn-inverse btn-small" ng-click="dec()">Decrypt</button>
+              <button type="submit" name="direction" value="Encrypt" class="btn float-right btn-primary btn-small" ng-click="enc()">Encrypt</button>    
+          </div>
+
+          <textarea placeholder="" name="inpText" rows="5" class="input-block-level" ng-model="result"></textarea>
+
+        </div>
+      <!-- build:js scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/crypto-js/index.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:js scripts/plugins.js -->
+      <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+      <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+      <!-- endbuild -->
+      <!-- build:js scripts/main.js -->
+      <script src="scripts//crypto-js/crypto-js.js"></script>
+      <script src="scripts/main.js"></script>
+      <script src="scripts/controller.js"></script>
+      
+      <!-- endbuild -->
+   </body>
+</html>

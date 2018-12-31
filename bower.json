@@ -1,0 +1,14 @@
+{
+  "name": "aesencryption-net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~4.0.0-alpha.6",
+    "popper.js": "^1.14.3",
+    "angular": "^1.7.2",
+    "crypto-js": "^3.1.9"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
